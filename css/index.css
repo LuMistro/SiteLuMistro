@@ -7,6 +7,16 @@
     z-index: 1;
 }
 
+.fontOpenSans{
+  font-family: 'Open Sans', sans-serif !important;
+    z-index: 1;
+}
+
+.fontDescricao{
+  font-weight: bold;
+    z-index: 1;
+}
+
 .zindex1{
     z-index: 1 !important;
 }
@@ -16,6 +26,7 @@ html{
 }
 body{
     margin: 0;
+    font-family: 'Oswald', sans-serif !important;
 }
 
 .section {
@@ -31,18 +42,16 @@ body{
 .section h1 {
     text-align: center;
     font-size: 6rem;
-    padding: 20px;
-    margin: 15px;
+    margin-top: 12rem;
     z-index: 1;
     opacity: 0.7;
 }
 
 .section p {
     text-align: center;
-    font-size: 2rem;
-    padding: 20px;
-    margin: 15px;
+    font-size: 22px;
     z-index: 1;
+
     opacity: 0.7;
 }
 
@@ -64,10 +73,6 @@ body{
     opacity: 0.5;
 }
 
-.page {
-    /* height: 100%; */
-    /* background-color: #584e4a; */
-  }
   .content {
     /* height: 200%; */
     transform-origin: top left;
