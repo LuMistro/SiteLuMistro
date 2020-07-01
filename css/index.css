@@ -311,20 +311,23 @@ html {
     transition: border-color 0.2s;
 }
 
-.menu_items a .icon:hover {
+li:hover a {
     color: #fff;
-    z-index: 3;
-    opacity: 0.8;
-}
-
-.menu_items a:hover .icon:after {
-    border-color: #fff;
     opacity: 0.8;
     z-index: 1;
 }
 
-.menu_items a:hover {
+li:hover .icon {
     color: #fff;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+li:hover a .icon:after {
+    color: #fff;
+    opacity: 0.8;
+    z-index: 1;
+    border-color: #fff;
 }
 
 .shazam .content {
