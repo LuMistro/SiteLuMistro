@@ -7,8 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-
-
+    <script src="js/animacoes.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 
@@ -17,39 +16,42 @@
 <body>
     <div class="page">
         <span class="menu_toggle">
-            <i class="menu_open fa fa-bars fa-lg"></i>
-            <i class="menu_close fa fa-times fa-lg"></i>
+            <i class="menu_open fa fa-bars "></i>
+            <i class="menu_close fa fa-times "></i>
         </span>
         <ul class="menu_items">
-            <li><a href="#"><i class="icon fa fa-home fa-2x"></i> Moar</a></li>
-            <li><a href="#"><i class="icon fa fa-phone fa-2x"></i> Coffee</a></li>
-            <li><a href="#"><i class="icon fa fa-heart fa-2x"></i> Please</a></li>
+            <li><a href="https://github.com/LuMistro"><i class="icon fa fa-home  fa-2x"></i> GitHub</a></li>
+            <li><a href="https://www.instagram.com/luizamaria_s2/"><i class="icon fa fa-phone fa-2x"></i> Instagram</a>
+            </li>
+            <li><a href="http://twixar.me/mkGm"><i class="icon fa fa-heart fa-2x"></i> Whatsapp</a></li>
+            <li><a href="https://www.linkedin.com/in/luiza-mistro-23891117b/"><i class="icon fa fa-heart fa-2x"></i>
+                    Linkedin</a></li>
         </ul>
     </div>
 
 
     <!-- Título - meu nome -->
     <div class="section">
-        <h1 class="fontSacramento">Luiza Mistro</h1>
-        <br>
-        <p class="fontDescricao">Java Developer
-            <br>
-            Web Designer
-            <br>
-            UX/UI Designer</p>
+
+        <h1 class="fontDescricao">Luiza Mistro</h1>
+
+        <p>
+            <a class=" fontDescricao typewrite" data-period="1000" data-type='["I am Java Developer", "I am Web Designer", "I am Mobile Developer","I am UX/UI Designer", "I love what I do"]'>
+                <span class="wrap"></span>
+            </a>
+        </p>
     </div>
 
     <script>
         // elements
         var $page = $('.page');
 
-        $('.menu_toggle').on('click', function () {
+        $('.menu_toggle').on('click', function() {
             $page.toggleClass('shazam');
         });
-        $('.content').on('click', function () {
+        $('.content').on('click', function() {
             $page.removeClass('shazam');
         });
-
     </script>
 
 </body>

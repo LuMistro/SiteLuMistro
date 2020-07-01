@@ -1,33 +1,38 @@
-.fontSacramento{
-    font-family: 'Sacramento', cursive !important;
-    z-index: 1;
-}
-.fontAlice{
-    font-family: 'Alice', serif !important;
-    z-index: 1;
-}
-
-.fontOpenSans{
-  font-family: 'Open Sans', sans-serif !important;
-    z-index: 1;
-}
-
-.fontDescricao{
-  font-weight: bold;
-    z-index: 1;
-}
-
-.zindex1{
-    z-index: 1 !important;
-}
-html{
+html {
     margin: 0;
     overflow: hidden;
 }
-body{
+
+body {
     margin: 0;
     font-family: 'Oswald', sans-serif !important;
+    z-index: 1;
 }
+
+
+/* Início do css de fontes */
+
+.fontSacramento {
+    font-family: 'Sacramento', cursive !important;
+}
+
+.fontAlice {
+    font-family: 'Alice', serif !important;
+}
+
+.fontOpenSans {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.fontDescricao {
+    font-weight: bold;
+}
+
+
+/* Fim do css de fontes */
+
+
+/* Início css para os textos */
 
 .section {
     position: relative;
@@ -44,16 +49,122 @@ body{
     font-size: 6rem;
     margin-top: 12rem;
     z-index: 1;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .section p {
     text-align: center;
     font-size: 22px;
     z-index: 1;
-
-    opacity: 0.7;
+    opacity: 0.8;
 }
+
+
+/* Fim css para os textos */
+
+
+/* Início css para o typing animation descriçao */
+
+.typewriter h1 {
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid rgb(24, 117, 194);
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+
+/* The typing effect */
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+
+/* The typewriter cursor effect */
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent
+    }
+    50% {
+        border-color: orange;
+    }
+}
+
+
+/* Fim css para o typing animation descriçao */
+
+
+/* Início css para o typing animation nome */
+
+
+/* Google Fonts */
+
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+/* Global */
+
+html {
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.line-1 {
+    position: relative;
+    top: 50%;
+    width: 24em;
+    margin: 0 auto;
+    /* border-right: 2px solid rgba(255,255,255,.75); */
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+
+/* Animation */
+
+.anim-typewriter {
+    animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 24em;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, .75);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+
+/* Início css para o typing animation nome */
+
+
+/* Início css para o background image */
 
 .video-container {
     position: absolute;
@@ -73,19 +184,23 @@ body{
     opacity: 0.5;
 }
 
-  .content {
+
+/* Fim css para o background image */
+
+
+/* Início css para o menu lateral */
+
+.content {
     /* height: 200%; */
     transform-origin: top left;
     transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
     /* background-color: #f0f0f0; */
-  }
-  .content_inner {
-    height: 50%;
-    overflow-y: auto;
-    padding: 50px 20%;
-  }
-  /* basically all styling from now on */
-  .menu_toggle {
+}
+
+
+/* basically all styling from now on */
+
+.menu_toggle {
     z-index: 900;
     position: fixed;
     top: 0;
@@ -95,65 +210,93 @@ body{
     width: 100px;
     height: 80px;
     background-color: #3aaaccc7;
-    /* opacity: 0.6; */
+    opacity: 0.7;
     border-bottom-right-radius: 100%;
-  }
-  .menu_toggle:active i {
+}
+
+.menu_toggle:active i {
     opacity: 0.8;
-  }
-  .menu_toggle i {
-    color: #f0f0f0;
-  }
-  .menu_toggle .menu_open, .menu_toggle .menu_close {
+}
+
+.menu_toggle i {
+    color: #000;
+}
+
+.menu_toggle .menu_open,
+.menu_toggle .menu_close {
     position: absolute;
     top: 50%;
     left: 40%;
     margin-top: -15px;
     margin-left: -12px;
     transition: transform 0.7s cubic-bezier(1, 0.005, 0.24, 1);
-  }
-  .menu_toggle .menu_open {
+}
+
+.menu_toggle .menu_open {
     transform-origin: -100px -100px;
-  }
-  .menu_toggle .menu_close {
+}
+
+.menu_toggle .menu_close {
     transform: rotate(20deg);
     transform-origin: -100px -160px;
-  }
-  .menu_items {
+}
+
+.menu_items {
     position: fixed;
     bottom: 0;
     left: 50px;
     list-style-type: none;
     margin: 0;
+    z-index: 2;
     padding: 0;
-  }
-  .menu_items li {
+}
+
+.menu_items li {
     height: 60px;
     margin-bottom: 30px;
     transform: translateX(-300px);
     transition: transform 0.7s 0s cubic-bezier(1, 0.005, 0.24, 1);
-  }
-  .menu_items li:nth-child(2) {
+}
+
+.menu_items li:nth-child(2) {
+    margin-left: 20px;
+}
+
+.menu_items li:nth-child(3) {
+    margin-left: 30px;
+}
+
+.menu_items li:nth-child(4) {
     margin-left: 40px;
-  }
-  .menu_items li:nth-child(3) {
-    margin-left: 80px;
-  }
-  .menu_items a {
+}
+
+
+/* Cor da letra */
+
+.menu_items a {
     display: block;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #ffffff;
+    color: #000000;
+    font-weight: bold;
     transition: color 0.2s;
-  }
-  .menu_items a .icon {
+}
+
+
+/* Cor do icone */
+
+.menu_items a .icon {
     position: relative;
     display: inline-block;
     margin-right: 25px;
-    color: #ffffff;
-  }
-  .menu_items a .icon:after {
+    color: #000000;
+}
+
+
+/* Cor do cículo em volta de icone */
+
+.menu_items a .icon:after {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -164,40 +307,54 @@ body{
     margin-left: -33px;
     margin-top: -32px;
     border-radius: 100%;
-    border: 2px solid #f0f0f0;
+    border: 2px solid #000000;
     transition: border-color 0.2s;
-  }
-  .menu_items a:hover {
-    color: #f0f0f0;
-  }
-  .menu_items a:hover .icon:after {
-    border-color: #f37272;
-  }
-  .menu_items a:active .icon {
-    color: #f37272;
-  }
-  /* Let's open up the menu */
-  .shazam {
-    /*.content_inner {
-     height: 100%;
-     }*/
-  }
-  .shazam .content {
+}
+
+.menu_items a .icon:hover {
+    color: #fff;
+    z-index: 3;
+    opacity: 0.8;
+}
+
+.menu_items a:hover .icon:after {
+    border-color: #fff;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.menu_items a:hover {
+    color: #fff;
+}
+
+.shazam .content {
     transform: rotate(-30deg);
-  }
-  .shazam .menu_open {
+}
+
+.shazam .menu_open {
     transform: rotate(-20deg);
-  }
-  .shazam .menu_close {
+}
+
+.shazam .menu_close {
     transform: rotate(0);
-  }
-  .shazam .menu_items li {
+}
+
+.shazam .menu_items li {
     transform: translateX(0);
     transition: transform 0.35s 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-  .shazam .menu_items li:nth-child(2) {
+}
+
+
+/* Tempo de animação de entrada dos itens do menu */
+
+.shazam .menu_items li:nth-child(2) {
     transition-delay: 0.47s;
-  }
-  .shazam .menu_items li:nth-child(3) {
+}
+
+.shazam .menu_items li:nth-child(3) {
     transition-delay: 0.48s;
-  }
+}
+
+.shazam .menu_items li:nth-child(4) {
+    transition-delay: 0.49s;
+}
